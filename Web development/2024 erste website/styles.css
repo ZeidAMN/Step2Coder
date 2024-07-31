@@ -1,0 +1,53 @@
+* { 
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: red;
+    display: inline-block;
+    border: 2px solid green;
+    padding: 20px;
+    margin: 10px;
+}
+
+h6 {
+    background-color: pink;
+    font-size: 50px;
+    transition: all 3s;
+    //visibility: hidden;
+    //display: inline;
+}
+
+h6:hover {
+    font-size: 100px;
+}
+
+p {
+    margin: 20px 0;
+    /*margin-top: 20px;
+    margin-bottom: 20px;*/
+    margin: 20px 0 20px 0;
+}
+
+.absatz {
+    font-size: 20px;
+}
+
+/*
+        1. Link-Farbe ändern
+        2. Unterstrich weg
+        3. Unterstrich bei hover wieder einfügen -> text-decoration: underline;
+
+*/
+
+a{
+    color: red;
+    text-decoration: none;
+
+
+}
+
+a:hover{
+    text-decoration: underline;
+}

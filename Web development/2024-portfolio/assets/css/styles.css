@@ -1,0 +1,124 @@
+* {
+    margin: 0;      /* Außernabstand */
+    padding: 0;     /* Innenabstand */
+
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+/* class aus html werden mit .name angesprochen */
+
+.hero {
+    width: 100%;
+    height: 500px;
+    background-color: red;
+    /* background-color: red */
+    background-image: url("../images/pexels-luis-gomes-166706-546819.jpg");
+    background-size: cover;   /* cover & contain  ( ganzen bild im verfügbaren platz anzeigen */
+    background-repeat: no-repeat;   /* am ehesten mit contain zu verwenden */
+    background-position: center; /* Bildausschnitt */
+
+    /* Flexbox initialisieren */
+    display: flex;
+    justify-content: right;    /* horiziale Ausrichtung */
+    align-items: center;
+
+    /* Abstand nach unten */
+    margin-bottom: 100px;
+}
+
+.page-title {
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding-right: 20px;
+    text-align: center;
+
+}
+
+.card {
+    display: flex; /* flex = text nebeneinander */
+    max-width: 560px;
+    margin: 0 auto;
+    background-color: #ccc;
+    gap: 20px; /* Abstand zwiscjen img und card-content div */
+    margin-bottom: 100px;
+}
+
+.card img {
+    max-width: 50%;
+    object-fit: cover; /* wie background-size nur für <img>-tag */
+}
+ 
+.card-content {
+    padding: 20px;
+}
+ 
+.card-content h2 {
+    margin-bottom: 20px;
+}
+
+#animatedTitle {
+    /* folgt */
+    transition: transform 1s;
+}
+
+.animated {
+    transform: rotate(180deg); /* oder scale(1.5); rotate(180deg); */
+}
+
+/* Desktop First Ansatz */
+/*
+@media (max-width: 430px) {
+    /* deativate flexbox 
+    .card {
+        display: block;
+    }
+
+    .card img {
+        max-width: 100%;
+    }
+}*/
+
+/* Mobile First Absatz (alles was davor kommt, ist das Styling für Mobile, alles ab hier für größere Displays */
+@media (min-width: 768px) {
+    .hero {
+        justify-content: right; /* Rechtsbündig für größere Bildschirme */
+    }
+
+    .page-title {
+        font-size: 60px; /* Größere Schriftgröße für größere Bildschirme */
+        text-align: right; /* Rechtsbündig für größere Bildschirme */
+        padding-right: 20px;
+    }
+
+    .card {
+        display: flex; /* Flexlayout für größere Bildschirme */
+        max-width: 560px; /* Maximale Breite für größere Bildschirme */
+        gap: 20px; /* Abstand zwischen Bild und Inhalt */
+        margin-bottom: 100px; /* Abstand nach unten */
+    }
+
+    .card img {
+        max-width: 50%; /* Halbe Breite für größere Bildschirme */
+    }
+
+    .card-content {
+        padding: 20px; /* Mehr Abstand für größere Bildschirme */
+    }
+
+    .card-content h2 {
+        margin-bottom: 20px; /* Mehr Abstand für größere Bildschirme */
+    }
+}
+
+/* Übung vor der Pause
+1. Front size von .page-title für beide Screens anpassen
+2. .page-title zentrieren und ab 768px rechtsbündig (wie jetzt)
+*/

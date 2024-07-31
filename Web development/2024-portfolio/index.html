@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeid - Mein portfolio</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class="hero">
+        <h1 class="page-title">Herzlich Willkommen</h1>
+    </div>
+
+    <div class="card">
+        <!--
+            src = source Quelldatei
+            alt = alternative Text = Text der angezeigt wird, wenn Bild nicht geladen werden kann
+        -->
+        <img src="/assets/images/pexels-njeromin-11741402 (1).jpg" 
+        alt="Portrait Zeid">
+        <div class="card-content">
+            <h2 class="card-title" id ="animatedTitle">Baby affe</h2>
+            <p class="card-copy">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit, consequatur voluptates et beatae corrupti aperiam nostrum rerum error provident fuga, laudantium repellat voluptatum possimus quam aut, nihil maiores. Corporis, distinctio!
+            </p>
+            <button id="btn">Text animieren</button>
+        </div>
+        <!-- javascript code vor dem schließenden body-tag schreiben bzw. einbinden -->
+        <script>
+            /* log message */
+            /* variablen definiren mit var, let const */
+            /* Unterschied Integer und String */
+            /* DOM = Document Object Model 
+            let a = 4 /* let kann man ändern und const nicht 
+            const b = 9 
+            a = 10
+            console.log(a + b)
+
+            const cardTitle = document.querySelector(".card-title")/*.innerHTML /* oder .textContent kann man auch nehmen*/
+            /* Arbeitsauftrag = .value zum Laufen zu bekommen, sodass nur der Text in der Konsole angezeigt wird */
+            /*cardTitle.addEventListener('dblclick', function() {
+                alert('Card Title wurde angeklickt')
+            })
+            console.log(cardTitle)*/
+            document.querySelector('#btn').addEventListener('click', function() {
+                const animatedTitle = document.querySelector('#animatedTitle')
+                animatedTitle.classList.toggle("animated")
+            })
+            
+            
+
+        </script>
+    </div>
+</body>
+</html>

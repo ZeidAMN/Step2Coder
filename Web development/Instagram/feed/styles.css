@@ -1,0 +1,181 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* Neutral background color */
+}
+
+#app {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 60px;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    position: fixed;
+    height: 100%;
+    border-right: 4px solid black; /* Increased border width */
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.5em;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-icon {
+    font-size: 24px;
+}
+
+#mainContent {
+    margin-left: 60px;
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Center align the content */
+    align-items: flex-start; /* Align items to the start of the container */
+}
+
+.page {
+    display: none;
+}
+
+#home:target,
+#upload:target {
+    display: block;
+    width: 60%; /* Set the width of each page */
+    max-width: 800px; /* Max width for better readability */
+}
+
+h1 {
+    margin-top: 0;
+    text-align: center;
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.custom-file-upload {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.upload-form input[type="file"] {
+    display: none;
+}
+
+.upload-form input[type="text"],
+.upload-form textarea {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+.upload-form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.post-feed {
+    margin: 20px 0;
+    width: 100%;
+}
+
+.post {
+    background: rgba(255, 255, 255, 0.9);
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid black; /* Black border around posts */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-header h2 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.post-image {
+    max-width: 100%; /* Ensures images fit within the container */
+    height: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+.post-body p {
+    margin: 10px 0;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.comment-section {
+    margin-top: 20px;
+}
+
+.add-comment {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.add-comment input[type="text"] {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.add-comment button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-comment button:hover {
+    background-color: #0056b3;
+}
+
+.comment {
+    margin-top: 10px;
+}
+
+.comment p {
+    margin: 0;
+    font-size: 0.9em;
+}

@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"name": "erste HÜ",
+			"path": "../erste HÜ"
+		},
+		{
+			"name": "2024 erste website",
+			"path": "."
+		},
+		{
+			"name": "Python",
+			"path": "../../Python"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "2024 erste website"
+	}
+}
